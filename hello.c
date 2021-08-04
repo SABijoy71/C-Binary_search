@@ -3,13 +3,19 @@
 #include <math.h>
 #include <string.h>
 
-int binary_search();
+int binary_search(int number[10],int num,int high_index,int low_index,int mid_index,int i);
 
 int main(){
 
 	int number[10] = {1,4,5,9,5,6,7,10,12,14};
 
-	int num = 10,high_index = 9,low_index = 0,mid_index,i;
+	int num,low_index,high_index,mid_index,i;
+	low_index = 0;
+	high_index = 9;
+
+	printf("Enter any number for searching in the array: ");
+	fflush(stdout);
+	scanf("%d", &num);
 
 	binary_search(number,num,high_index,low_index,mid_index,i);
 
